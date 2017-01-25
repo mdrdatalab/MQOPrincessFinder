@@ -9,17 +9,28 @@ import random
 
 
 def dist1(guess, point):
+    """calculates the rectilinear distance on a hex grid (the hex tiles can be 
+    thought of as 3d cubes, thus the z-axis)"""
     z1 = -(point[0]+point[1])
     z2= -(guess[0]+guess[1])
     return max((abs(point[0]-guess[0])),abs(point[1]-guess[1]),abs(z1-z2))
     
 
 def possibilities(loc, distance, feasibleSet):
-    #need to double check logic of distmax and distmin... something isn't working
+    """given a location, distance, and feasibleSet (possibly empty), returns
+    a new feasible set defined by the overlap of the supplied set and the set
+    of points at most 'distance' tiles away and further away than the next
+    distance at which a different distance clue would be given (i.e. if you are
+    told the princess 100 tiles away, you are at least 25 tiles away otherwise
+    a different clue would be given). A negative distance would indicate that the
+    princess is nowhere within that distance and removes any tiles within that
+    distance from the feasible set
+    """
+    #need to double check logic of distmax and distmin... seems to be working
     if distance < 0:
         temp = []
         for x in feasibleSet:
-            if (dist1(x,loc) < 100):
+            if (dist1(x,loc) < abs(distance)):
                 temp.append(x)
         return list(set(feasibleSet) - set(temp))
         
