@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Princess Finder</title>
+	</head>
+	<body bgcolor="#527EA9">
+		<div style="width:100%">
+			<div><!--<div style="background-color:#4286f4; width:100%">-->
+				<h1>Princess Finder</h1>
+			</div>
+			<form name="pfinder" action='' method=''>
+				Coordinates: <br>
+				<input type = "number" min=0 max=999 name="x" value="">
+				<input type = "number" min=0 max=999 name="y" value=""><p>
+				Distance: <br> <input type = "number" name="d"><p>
+				<input type = "button" name="check" value="Submit" onClick="getVals(this.form)">
+				<input type = "button" name="reset" value="Reset" onClick="resetF()">
+			</form>
+
+			<br>
+			Possibilities: <span id="posslen">0</span><br>
+			<textarea id = "possibilities" rows = 25 readonly>
+				
+			</textarea>
+
+
+
+
+
+		<script type="text/javascript" src="princessFinder.js"></script>
+
+
+	</body>
+</html>

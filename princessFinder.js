@@ -1,4 +1,4 @@
-
+var f = []
 
 function dist(point1, point2){
 	//calculates the distance on a hex grid (the hex tiles can be thought of as 3d cubes, thus the z-axis)
@@ -36,4 +36,25 @@ function possibilities(location, distance, feasibleSet){
 	}
 	return temp
 
+}
+
+function getVals(form){
+	var position = [form.x.valueAsNumber, form.y.valueAsNumber]
+	var distance = form.d.valueAsNumber
+	f = possibilities(position, distance, f)
+	populate(f)
+}
+
+function resetF(){
+	f = []
+	populate(f)
+}
+
+function populate(f){
+	document.getElementById("possibilities").innerHTML = ''
+	document.getElementById("posslen").innerHTML = f.length
+	for(var i=0; i <f.length; i++){
+		document.getElementById("possibilities").innerHTML += f[i].toString()
+		document.getElementById("possibilities").innerHTML += "\n"
+	}
 }
