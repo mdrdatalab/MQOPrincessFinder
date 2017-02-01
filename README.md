@@ -17,7 +17,8 @@ the distance clues they are given. Overlapping sets are combined to further redu
 - [ ] suggest random location in set
 - [ ] intelligently suggest locations
 - [ ] suggestions based on travel distance
-- [ ] port to javascript
+- [x] port to javascript
+- [x] github.io page
 - [ ] visualize feasible sets
 - [ ] interactive visualization
 - [ ] testing and demonstration script
