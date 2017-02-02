@@ -54,10 +54,12 @@ function resetF(){
 function populate(f){
 	document.getElementById("possibilities").innerHTML = ''
 	document.getElementById("posslen").innerHTML = f.length
+	var inc = 1
 	if(f.length > 5000){
 		document.getElementById("posslen").innerHTML += ("<br>Showing first 5000...")
+		inc = Math.round(f.length/5000)
 	}
-	for(var i=0; (i <f.length) && (i < 5000); i++){
+	for(var i=0; (i <f.length) && (i < 5000); i += inc){
 		document.getElementById("possibilities").innerHTML += f[i].toString()
 		document.getElementById("possibilities").innerHTML += "\n"
 	}
