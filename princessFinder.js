@@ -34,6 +34,7 @@ function possibilities(location, distance, feasibleSet){
 			temp.push(x)
 		}
 	}
+	console.log(temp.length)
 	return temp
 
 }
@@ -53,7 +54,10 @@ function resetF(){
 function populate(f){
 	document.getElementById("possibilities").innerHTML = ''
 	document.getElementById("posslen").innerHTML = f.length
-	for(var i=0; i <f.length; i++){
+	if(f.length > 5000){
+		document.getElementById("posslen").innerHTML += ("<br>Showing first 5000...")
+	}
+	for(var i=0; (i <f.length) && (i < 5000); i++){
 		document.getElementById("possibilities").innerHTML += f[i].toString()
 		document.getElementById("possibilities").innerHTML += "\n"
 	}

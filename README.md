@@ -11,8 +11,8 @@ the distance clues they are given. Overlapping sets are combined to further redu
 ###Feasible Sets
 
 ##To Do
-- [ ] confirm distance metric
-- [ ] confirm min/max distance
+- [x] confirm distance metric
+- [x] confirm min/max distance
 - [ ] support for maximum distance modifiers
 - [ ] suggest random location in set
 - [ ] intelligently suggest locations
