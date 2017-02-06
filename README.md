@@ -13,7 +13,8 @@ the distance clues they are given. Overlapping sets are combined to further redu
 ##To Do
 - [x] confirm distance metric
 - [x] confirm min/max distance
-- [ ] support for maximum distance modifiers
+- [x] support for maximum distance modifiers
+- [ ] support for negative clues
 - [ ] suggest random location in set
 - [ ] intelligently suggest locations
 - [ ] suggestions based on travel distance

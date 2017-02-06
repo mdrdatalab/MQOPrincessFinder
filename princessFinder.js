@@ -12,7 +12,11 @@ function dist(point1, point2){
 
 function possibilities(location, distance, feasibleSet){
 
-	distances = [100,25,10,5,0,0]
+	distances = [200,100,25,10,5,0,0]
+
+	if(distance > 100){
+		distances[0] = distance
+	}
 
 	distmax = distance
 	distmin = distances[distances.indexOf(distance)+1]
