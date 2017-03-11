@@ -1,8 +1,9 @@
-#box {
-	border-radius: 10px;
-	background: #bfad71;
-	width: 250px;
-	padding: 1px;
 
+.left {
+	float:left;
+	width: 20%;
+}
 
+.right {
+	margin-left: 20%;
 }
